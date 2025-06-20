@@ -1,5 +1,10 @@
-FROM python:3.10-slim
-RUN useradd -ms /bin/bash intern
-USER intern
-WORKDIR /home/intern/work
-CMD ["sleep", "infinity"]
+FROM python:3.9-slim
+
+WORKDIR /workspace
+
+COPY task_manager/workspaces/intern123/ /workspace/
+
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

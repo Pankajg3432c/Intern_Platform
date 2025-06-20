@@ -20,3 +20,4 @@ This platform helps automate the following:
 2. Store code in a unique workspace folder.
 3. If `index.html` is present, move it to the `preview/` folder.
 4. NGINX serves the preview on `http://localhost:8080/intern123.html`.
+# Intern_Platform
